@@ -513,7 +513,7 @@ function disabledAttrHtmlElementVanilla(){
     const exampleBtn = document.createElement("button");
     const btn= document.createElement("button");
     btn.innerText="This is a test"
-    exampleBtn.innerText="Click me to add the disabled attribute to the p element";
+    exampleBtn.innerText="Click me to add the disabled attribute to the button element";
     exampleBtn.addEventListener("click", function(){
         btn.setAttribute("disabled","true")
         btn.innerText="Disabled!"
@@ -536,7 +536,7 @@ function removedisabledAttrHtmlElementVanilla(){
     const btn= document.createElement("button");
     btn.setAttribute("disabled","true")
     btn.innerText="Disabled!"
-    exampleBtn.innerText="Click me to remove the disabled attribute to the p element";
+    exampleBtn.innerText="Click me to remove the disabled attribute to the button element";
     exampleBtn.addEventListener("click", function(){
         btn.removeAttribute("disabled")
         btn.innerText="Active!"
