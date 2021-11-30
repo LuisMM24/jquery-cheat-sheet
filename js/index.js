@@ -37,7 +37,7 @@ function createModal(obj){
                                 <section class="vanilla">
                                     <h2>Vanilla JS</h2>
                                     <div class="demo5">
-                                    <p class="snippet">${obj.vanillaSnippet}</p>
+                                    <p class="snippet"></p>
                                     <!--VanillaDemo-->
                                     <div class="demo"></div>
                                     </div>
@@ -49,7 +49,7 @@ function createModal(obj){
                                 <section class="jquery">
                                     <h2>jQuery</h2>
                                     <div class="demo5">
-                                    <p class="snippet">${obj.jquerySnippet}</p>
+                                    <p class="snippet"></p>
                                     <!--jQueryDemo-->
                                     <div class="demo">
                                     
@@ -64,6 +64,10 @@ function createModal(obj){
                                     //event listener if click out the modal and exit button
                                     $("#exit").on("click", animateBeforeClose);
                                     $("#background-modal").on("click",removeModal);
+                                    //load consts demo and paragraphs and spawn snippet
+                                    vanillaFunctions();
+                                    $(".snippet").eq(0).append(obj.vanillaSnippet);
+                                    $(".snippet").eq(1).append(obj.jquerySnippet);         
                                     //create button example
                                     const buttonVanilla=$("<button id='vanillaBtn'>Press me to see how it works!</button>");
                                     $(buttonVanilla).one("click",obj.vanillaMethod);
@@ -71,7 +75,7 @@ function createModal(obj){
                                     $(buttonJquery).one("click",obj.jqueryMethod);
                                     $(".demo").eq(0).append(buttonVanilla);
                                     $(".demo").eq(1).append(buttonJquery);      
-                                    $("#modal").hide();     
+                                    $("#modal").hide();
             }
 //remove modal
 function removeModal(){
